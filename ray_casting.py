@@ -1,5 +1,5 @@
 import pygame
-import settings
+from settings import *
 from map import world_map
 import math
 
