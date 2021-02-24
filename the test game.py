@@ -15,7 +15,7 @@ while True:
             exit()
     player.movement()
     sc.fill(BLACK) 
-    #player_pos = (player.x, player.y)
+    player_pos = (player.x, player.y)
 
     ray_casting(sc, player.pos, player.angle)
 
