@@ -17,6 +17,9 @@ while True:
     sc.fill(BLACK) 
     player_pos = (player.x, player.y)
 
+    pygame.draw.rect(sc, BLUE, (0, 0, WIDTH, HALF_HEIGHT))
+    pygame.draw.rect(sc, DARKGRAY, (0, HALF_HEIGHT, WIDTH, HALF_HEIGHT))
+
     ray_casting(sc, player.pos, player.angle)
 
     #pygame.draw.circle(sc, GREEN, player.pos, 12)
