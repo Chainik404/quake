@@ -4,10 +4,13 @@ from player import Player
 import math
 from map import world_map
 from ray_casting import ray_casting
+from drawing import Drawing
 pygame.init()
 sc = pygame.display.set_mode((WIDTH,HEIGHT))
 clock = pygame.time.Clock()
 player = Player()
+drawing = Drawing(sc)
+
 
 while True:
     for event in pygame.event.get():
@@ -17,8 +20,9 @@ while True:
     sc.fill(BLACK) 
     player_pos = (player.x, player.y)
 
-    pygame.draw.rect(sc, BLUE, (0, 0, WIDTH, HALF_HEIGHT))
-    pygame.draw.rect(sc, DARKGRAY, (0, HALF_HEIGHT, WIDTH, HALF_HEIGHT))
+    #pygame.draw.rect(sc, SKYBLUE, (0, 0, WIDTH, HALF_HEIGHT))
+    #pygame.draw.rect(sc, DARKGRAY, (0, HALF_HEIGHT, WIDTH, HALF_HEIGHT))
+    drawing.background()
 
     ray_casting(sc, player.pos, player.angle)
 
